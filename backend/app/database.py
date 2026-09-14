@@ -8,7 +8,10 @@ from .models import (
     ApplicationRecordORM, AgentConfigORM, ActivityLogORM, utcnow
 )
 
-DB_PATH = Path(__file__).resolve().parent.parent / "career_agent.db"
+if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+    DB_PATH = Path("/tmp") / "career_agent.db"
+else:
+    DB_PATH = Path(__file__).resolve().parent.parent / "career_agent.db"
 DATABASE_URL = f"sqlite:///{DB_PATH}"
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
