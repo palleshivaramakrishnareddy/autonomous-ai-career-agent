@@ -1,0 +1,60 @@
+/* Custom application styling */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.7);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}
+
+.nav-item {
+  color: #94a3b8;
+  position: relative;
+}
+.nav-item:hover {
+  color: #f8fafc;
+  background-color: rgba(30, 41, 59, 0.7);
+}
+.nav-item.active {
+  color: #ffffff;
+  background-color: #4f46e5;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+
+.studio-pill {
+  color: #94a3b8;
+  background-color: rgba(30, 41, 59, 0.5);
+}
+.studio-pill:hover {
+  color: #ffffff;
+  background-color: rgba(51, 65, 85, 0.7);
+}
+.studio-pill.active {
+  color: #ffffff;
+  background-color: #4f46e5;
+  font-weight: 600;
+}
+
+.kanban-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.kanban-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.glow-brand {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
+}
